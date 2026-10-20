@@ -1,0 +1,226 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1c2130; /* Biru kehitam-hitaman */
+    color: #ffffff; /* Font berwarna putih */
+    overflow-x: hidden; /* Mencegah scroll horizontal yang tidak diinginkan */
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #1c2130;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.navbar-brand img {
+    filter: brightness(0) invert(1); /* Membuat logo putih jika aslinya gelap */
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    font-weight: 500;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #007bff; /* Warna biru cerah untuk hover/active */
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Hero Section / Jumbotron Slider */
+.hero-section {
+    padding-top: 80px; /* Sesuaikan dengan tinggi navbar */
+    background-color: #1c2130;
+}
+
+.hero-section .carousel {
+    max-width: 1200px; /* Batasi lebar jumbotron */
+    margin: 0 auto;
+}
+
+.hero-section .carousel-item img {
+    border-radius: 10px;
+    object-fit: cover;
+    height: 400px; /* Tinggi jumbotron */
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 0 0 10px 10px;
+    padding: 1rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.carousel-caption h5 {
+    color: #fff;
+}
+
+.carousel-caption p {
+    color: #eee;
+}
+
+/* Product Cards */
+#products {
+    background-color: #1c2130;
+}
+
+.product-card {
+    background-color: #2a3140; /* Warna sedikit lebih terang dari background utama */
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.product-card img {
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.product-card .card-body {
+    padding: 20px;
+    color: #ffffff;
+}
+
+.product-card .card-title {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.product-card .card-text {
+    font-size: 0.95rem;
+    color: #cccccc;
+}
+
+.product-card .card-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #007bff; /* Warna biru untuk harga */
+}
+
+/* Modal Styling */
+.modal-content {
+    background-color: #2a3140;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.modal-header {
+    border-bottom-color: #3f4a5f;
+}
+
+.modal-title {
+    color: #ffffff;
+}
+
+.btn-close {
+    filter: invert(1); /* Membuat tombol close menjadi putih */
+}
+
+.modal-body .lead {
+    color: #007bff;
+    font-weight: 700;
+}
+
+.modal-body hr {
+    border-top: 1px solid #3f4a5f;
+}
+
+.modal-body #productDetailImages .carousel-item img {
+    border-radius: 8px;
+    max-height: 400px;
+    object-fit: contain;
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* About Section */
+.bg-light-dark {
+    background-color: #222736;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #1c2130;
+    border-top: 1px solid #3f4a5f;
+    color: #ffffff;
+}
+
+.footer-logo {
+    filter: brightness(0) invert(1); /* Membuat logo putih di footer */
+    margin-bottom: 10px;
+}
+
+.footer h5 {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.footer a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #007bff;
+}
+
+.footer-icon-link {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section .carousel-item img {
+        height: 250px; /* Lebih kecil di mobile */
+    }
+
+    .modal-body .row {
+        flex-direction: column;
+    }
+
+    .modal-body .col-md-6 {
+        width: 100%;
+    }
+
+    .modal-body #productDetailImages {
+        margin-bottom: 20px;
+    }
+
+    .footer .col-md-4 {
+        text-align: center;
+    }
+}

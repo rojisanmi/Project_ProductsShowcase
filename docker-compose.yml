@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: loudwell_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: loudwell
+      POSTGRES_PASSWORD: loudwell123
+      POSTGRES_DB: loudwell
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5432:5432"
+    volumes:
+      - loudwell_pgdata:/var/lib/postgresql/data
+
+volumes:
+  loudwell_pgdata:

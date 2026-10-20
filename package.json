@@ -1,0 +1,19 @@
+{
+  "name": "loudwell-showcase",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w web",
+    "build": "npm run build -w web",
+    "start": "npm run start -w web",
+    "lint": "npm run lint -w web",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "db:migrate": "npm run prisma -w @loudwell/db -- migrate dev",
+    "db:seed": "npm run prisma -w @loudwell/db -- db seed",
+    "prisma": "npm run prisma -w @loudwell/db --"
+  }
+}
